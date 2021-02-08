@@ -1,0 +1,133 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #000000de;
+}
+.app-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "h h"
+    "n c"
+    "f f"
+    ;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px 10px;
+   width:80%;
+   margin: 0 auto;
+  }
+  .nav{
+    grid-area: n;
+  }
+  .header{
+    grid-area: h;
+    background-color: #ed6d64;
+    box-shadow: 0px 2px 4px 0px rgba(59,59,59,0.32);
+    color:white;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .content{
+    grid-area: c;
+  }
+  .content-img{
+    padding: 5px;
+    width: 400px;
+  }
+  .content-span{
+    margin-top: 5px;
+    font-size: large;
+  }
+  .footer{
+    background-color: #ed6d64;
+    box-shadow: 0px 2px 4px 0px rgba(59,59,59,0.32);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    grid-area: f;
+    font-weight: bold;
+  }
+
+.thumbnails-item{
+    border: 1px dashed black;
+    box-shadow: 0px 2px 4px 0px rgba(59,59,59,0.32);
+    border-radius: 5px;
+    margin:  20px auto;
+    padding: 20px;
+    width:100px;
+    display: block;
+
+}
+.thumbnails-title{
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color:red;
+}
+.thumbnails-image{
+    width:100%;
+}
+.logo-title{
+    position: fixed;
+    background-color: white;
+
+    text-align:center;
+    width: 100%;
+}
+.thumbnails-list{
+    list-style: none;
+    height: 80vh;
+    overflow-y: auto ;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a, a:active, a:visited {
+  color:white;
+  text-decoration: none;
+  outline: 0;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+.hiddenitem{
+  display: none;
+}
+
+.animationDiv {
+  box-shadow: 0px 2px 4px 0px rgba(59,59,59,0.32);
+  border-radius: 70px;
+  padding: 5px;
+  padding-top: 45px;
+  text-align: center;
+
+  width: 100px;
+  height: 60px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:-200px;}
+  75%  {background-color:green; left:0px; top:-200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:-200px;}
+  75%  {background-color:green; left:0px; top:-200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}

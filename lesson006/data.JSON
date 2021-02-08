@@ -1,0 +1,28 @@
+{
+    "listItems": [
+        {
+            "name": "flexbox",
+            "description": "<h3>CSS Flexbox Layout Module</h3><p>Before the Flexbox Layout module, there were four layout modes:<br><li>Block, for sections in a webpage</li>        <li> Inline, for text</li>        <li>Table, for two-dimensional table data</li>        <li>Positioned, for explicit position of an element</li>        <li> The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</li>         </ul>"
+        },
+        {
+            "name": "cssgrid",
+            "description": "<h3>Grid Layout</h3> <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. </p>"
+        },
+        {
+            "name": "cssanimation",
+            "description": "<h3>CSS Animations</h3> <p>CSS allows animation of HTML elements without using JavaScript or Flash! </p> <div class='animationDiv'>Animation</div>"
+        },
+        {
+            "name": "dom",
+            "description": "<h3>The HTML DOM (Document Object Model)</h3> <p>The DOM is a W3C (World Wide Web Consortium) standard.<br>     The DOM defines a standard for accessing documents:<br>The W3C Document Object Model (DOM) is a platform and language-neutral interface that      allows programs and scripts to dynamically access and update the content, structure, and style of a document.<br>          The W3C DOM standard is separated into 3 different parts:<br>     <ul>     <li>Core DOM - standard model for all document types</li>     <li>XML DOM - standard model for XML documents</li>     <li>HTML DOM - standard model for HTML documents</li>     </ul>     </p>"
+        },
+        {
+            "name": "ecmascript",
+            "description": "<h3>ECMAScript</h3> <p>ECMAScript (or ES)[1] is a scripting-language specification standardized by Ecma International      in ECMA-262 and ISO/IEC 16262. It was created to standardize JavaScript to help foster multiple       independent implementations. JavaScript has remained the best-known implementation of ECMAScript        since the standard was first published, with other well-known implementations including JScript        and ActionScript.[2] ECMAScript is commonly used for client-side scripting on the World Wide Web,        and it is increasingly being used for writing server applications and services using Node.js. </p>"
+        },
+        {
+            "name": "javasctipt",
+            "description": "<h3>JavaScript</h3> <p>JavaScript is the programming language of HTML and the Web.     JavaScript is easy to learn.          This tutorial will teach you JavaScript from basic to advanced. </p>"
+        }
+    ]
+}

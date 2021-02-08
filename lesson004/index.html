@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson_004</title>
+    <link rel="stylesheet" href="res/css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+  </head>
+
+  <body>
+    <div class="app_wrapper">
+      <div class="header">
+        List of favorite items
+      </div>
+
+      <div class="content">
+        <ul class="thumbnails_list" id="thumbnails_list"></ul>
+        <div class="detailed">
+          <div class="detailedImg">
+            <img src="res/img/empty.jpg" id="target_img" />
+          </div>
+
+          <div id="target_text" class="detailedText">
+            Click on the list item to see detailed information
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <a href="mailto:gungam@outlook.com">Gungam@outlook.com</a>
+      </div>
+    </div>
+    <script src="res/js/script.js"></script>
+    <script>
+      fetch("data.JSON")
+        .then(resp => resp.json())
+        .then(json => {
+          let list = json.listItems;
+          let thumbList = document.getElementById("thumbnails_list");
+          for (let i = 0; i < list.length; i++) {
+            const liItem = document.createElement("li");
+
+            const liItemDiv = document.createElement("div");
+            liItemDiv.setAttribute("class", "thumbnails_item");
+            liItemDiv.setAttribute("name", "thumbnails_item");
+            liItemDiv.setAttribute("id", list[i].name);
+            liItemDiv.setAttribute(
+              "onClick",
+              "toggleImg('" + list[i].name + "')"
+            );
+
+            const thumbTextDiv = document.createElement("div");
+            thumbTextDiv.setAttribute("class", "thumb_text");
+            thumbTextDiv.innerText = list[i].name;
+
+            const thumbImgDiv = document.createElement("div");
+            thumbImgDiv.setAttribute("class", "thumb_img");
+
+            const imgItem = document.createElement("img");
+            imgItem.setAttribute("class", "thumbnails_image");
+            imgItem.setAttribute("id", list[i].name + "_img");
+            imgItem.setAttribute("src", "res/img/" + list[i].name + ".png");
+
+            const hiddenItem = document.createElement("span");
+            hiddenItem.setAttribute("class", "hiddenItem");
+            hiddenItem.setAttribute("id", list[i].name + "_data");
+            hiddenItem.innerHTML = list[i].description;
+
+            thumbList.append(liItem);
+            liItem.append(liItemDiv);
+            liItemDiv.append(thumbTextDiv);
+            liItemDiv.append(imgItem);
+            liItemDiv.append(hiddenItem);
+          }
+        });
+    </script>
+  </body>
+</html>

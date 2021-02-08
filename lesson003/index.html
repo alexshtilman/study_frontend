@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson_003</title>
+    <link rel="stylesheet" href="res/css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf_8" />
+  </head>
+
+  <body>
+    <div class="app_wrapper">
+      <div class="header">
+        List of favorite items
+      </div>
+
+      <div class="content">
+        <img src="res/img/empty.jpg" id="target_img" style="width: 400px;" />
+        <span id="target_text">
+          Click on the list item to see detailed information
+        </span>
+      </div>
+      <div class="nav">
+        <ul class="thumbnails_list" id="thumbnails_list"></ul>
+      </div>
+      <div class="footer">
+        @ copyright <a href="mailto:gungam@outlook.com">Gungam@outlook.com</a>
+      </div>
+    </div>
+    <script src="res/js/script.js"></script>
+    <script>
+      fetch("data.JSON")
+        .then(resp => resp.json())
+        .then(json => {
+          let list = json.listItems;
+          let tuhmbList = document.getElementById("thumbnails_list");
+          for (let i = 0; i < list.length; i++) {
+            const liItem = document.createElement("li");
+            liItem.setAttribute("class", "thumbnails_item");
+
+            const linkItem = document.createElement("a");
+            linkItem.setAttribute(
+              "onClick",
+              "toggleImg('" + list[i].name + "')"
+            );
+            linkItem.setAttribute("href", "#");
+            liItem.append(linkItem);
+
+            const imgItem = document.createElement("img");
+            imgItem.setAttribute("class", "thumbnails_image");
+            imgItem.setAttribute("id", list[i].name + "_img");
+            imgItem.setAttribute("src", "res/img/" + list[i].name + ".png");
+            linkItem.append(imgItem);
+
+            const titleItem = document.createElement("span");
+            titleItem.setAttribute("class", "thumbnails_title");
+            titleItem.innerText = list[i].name;
+            linkItem.append(titleItem);
+
+            const hiddenItem = document.createElement("span");
+            hiddenItem.setAttribute("class", "hiddenitem");
+            hiddenItem.setAttribute("id", list[i].name + "_data");
+            hiddenItem.innerHTML = list[i].description;
+            linkItem.append(hiddenItem);
+
+            tuhmbList.append(liItem);
+          }
+        });
+    </script>
+  </body>
+</html>

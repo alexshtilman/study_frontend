@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson_006</title>
+    <link rel="stylesheet" href="res/css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+
+  <body>
+    <div class="app_wrapper">
+      <div class="header">
+        List of favorite items
+      </div>
+
+      <div class="content">
+        <ul class="thumbnails_list" id="thumbnails_list"></ul>
+        <div class="detailed" id="detailed">
+          <div id="detailedMenuNav" class="detailedMenuNav"></div>
+          <div class="detailedImg">
+            <img src="res/img/empty.jpg" id="target_img" />
+          </div>
+
+          <div id="target_text" class="detailedText">
+            Click on the list item to see detailed information
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <a href="mailto:gungam@outlook.com">Gungam@outlook.com</a>
+      </div>
+    </div>
+    <script src="res/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        fetch("http://localhost:5500/data.JSON")
+          .then(resp => resp.json())
+          .then(json => {
+            try {
+              json.listItems.forEach(createMenuItem);
+            } catch {
+              document.getElementById("detailed").innerHTML =
+                "can't create menu! Something goes wrong in createMenuItem function!";
+            }
+          })
+          .catch(err => {
+            if (err == "TypeError: Failed to fetch") {
+              document.getElementById("detailed").innerHTML =
+                "Can't read data from http://localhost:5500/data.JSON!";
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
