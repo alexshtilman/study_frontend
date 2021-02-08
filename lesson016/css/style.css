@@ -1,0 +1,14 @@
+.flexContainer {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 012</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 012</header>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            PersonsObjects
+          </div>
+
+          <div class="cardBody primary-text-color">
+            <div class="text-center">
+              <button id="showPersonsButton">
+                Show Persons
+              </button>
+              <button id="addPersonButton">
+                Add Person
+              </button>
+              <button id="generatePersonsButton">
+                Generate Persons
+              </button>
+            </div>
+
+            <div id="showPersons" class="hidden">
+              <div class="text-center light-primary-color orderedListDiv ">
+                <p>Ordered List of person</p>
+                <table class="center">
+                  <thead>
+                    <tr id="thPersons"></tr>
+                  </thead>
+                  <tbody id="tbodyPersons"></tbody>
+                </table>
+                <p>Ordered List of person with max AGE</p>
+                <table class="center">
+                  <thead>
+                    <tr id="thPersonsMax"></tr>
+                  </thead>
+                  <tbody id="tbodyPersonsMax"></tbody>
+                </table>
+              </div>
+            </div>
+            <div id="addPerson" class="hidden">
+              <div>
+                <input
+                  id="idString"
+                  type="number"
+                  placeholder="id"
+                  min="100"
+                  max="999"
+                />
+                <input id="name" type="text" placeholder="name" />
+                <input
+                  id="birthDate"
+                  type="number"
+                  placeholder="birthDate"
+                  min="1920"
+                  max="2020"
+                />
+              </div>
+              <button disabled id="submitButton">
+                Add Person
+              </button>
+            </div>
+            <div id="generatePersons" class="hidden">
+              <span>Amount of Persons [1-10]</span>
+              <input type="number" id="amountOfPersons" />
+              <button id="generateButton" disabled>Generate</button>
+            </div>
+          </div>
+          <div class="cardFooter default-primary-color ">
+            <label id="errorMessage"></label>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./js/table.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/listners.js"></script>
+    <script src="./js/functions.js"></script>
+  </body>
+</html>

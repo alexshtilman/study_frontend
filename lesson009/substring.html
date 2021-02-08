@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 009</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 009</header>
+      <nav>
+        <a class="active" href="./substring.html">substring.html</a>
+        <a href="./Indexof.html">indexof.html</a>
+        <a href="./delete-substrings.html">delete-substrings.html</a>
+      </nav>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            substring
+          </div>
+          <div class="cardBody primary-text-color">
+            <div id="loader" class="loader hidden pending"></div>
+            <label>
+              Button ‘get substring’ triggers presenting substring of the
+              string<br />
+              with the given length at the label content</label
+            >
+            <input id="substring" type="text" placeholder="enter string" />
+            <input
+              id="firstIndex"
+              type="number"
+              placeholder="enter first index"
+            />
+            <input id="length" type="number" placeholder=" enter length" />
+            <span id="Result">Result</span>
+          </div>
+
+          <div id="substringError" class="cardFooter default-primary-color ">
+            <button id="submitButton">
+              Get Substring
+            </button>
+            <button onclick="submitButtonPromise('substring')">
+              with promise
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function submitButton() {
+          let subString = document.getElementById("substring").value;
+          const firstIndex = document.getElementById("firstIndex").value;
+          const length = document.getElementById("length").value;
+          if (subString && firstIndex && length)
+            document.getElementById("Result").textContent = subString.substring(
+              firstIndex,
+              parseInt(firstIndex) + parseInt(length)
+            );
+          else
+            document.getElementById("Result").textContent =
+              "All fields required";
+        });
+    </script>
+  </body>
+</html>

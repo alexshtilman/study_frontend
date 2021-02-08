@@ -1,0 +1,9 @@
+.cell {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  cursor: "pointer";
+}
+.cell:hover {
+  background: black !important;
+}

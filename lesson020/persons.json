@@ -1,0 +1,60 @@
+{
+  "persons": [
+    {
+      "id": "1",
+      "emailAddress": "asd@a.ru",
+      "gender": "Female",
+      "name": "123",
+      "salary": "123",
+      "title": "WageEmployee"
+    },
+    {
+      "id": 514,
+      "name": "Dasha",
+      "emailAddress": "dasha514@tel-ran.co.il",
+      "gender": "female",
+      "title": "WageEmployee",
+      "salary": 244
+    },
+    {
+      "id": 467,
+      "name": "Sergey",
+      "emailAddress": "sergey467@yahoo.com",
+      "gender": "male",
+      "title": "SalesPerson",
+      "salary": 290
+    },
+    {
+      "id": 233,
+      "name": "Lena",
+      "emailAddress": "lena233@test.pro",
+      "gender": "female",
+      "title": "Manager",
+      "salary": 248
+    },
+    {
+      "id": 515,
+      "emailAddress": "asd@ar.ru",
+      "gender": "Female",
+      "name": "123",
+      "salary": "1234",
+      "title": "WageEmployee"
+    },
+    {
+      "id": 516,
+      "emailAddress": "asd@asd.ru",
+      "gender": "Female",
+      "name": "123",
+      "salary": "123",
+      "title": "WageEmployee"
+    },
+    {
+      "id": 777,
+      "emailAddress": "123@asd.ru",
+      "gender": "Female",
+      "name": "123",
+      "salary": 123,
+      "title": "WageEmployee"
+    }
+  ]
+}

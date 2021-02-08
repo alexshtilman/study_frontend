@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 020</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="container-fluid  mt-4">
+      <div class="row justify-content-md-center">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="employeeFormTab"
+              data-toggle="pill"
+              href="#employeeFormHome"
+              role="tab"
+              aria-controls="employeeFormHome"
+              aria-selected="true"
+              >Add new employee</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="employeeGenerateTab"
+              data-toggle="pill"
+              href="#employeeGenerateHome"
+              role="tab"
+              aria-controls="employeeGenerateHome"
+              aria-selected="false"
+              >Employees generation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="employeeShowTab"
+              data-toggle="pill"
+              href="#employeeShowHome"
+              role="tab"
+              aria-controls="employeeShowHome"
+              aria-selected="false"
+              >Show employees</a
+            >
+          </li>
+          <li class="nav-item disabled">
+            <div id="statusText" class="nav-link blink"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container-fluid ">
+      <div class="row justify-content-md-center">
+        <div class="col col-sm-6">
+          <div class="alert hidden" id="alertDiv" role="alert"></div>
+        </div>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <section
+          class="tab-pane fade show active"
+          id="employeeFormHome"
+          role="tabpanel"
+          aria-labelledby="employeeFormTab"
+        >
+          <div class="row justify-content-md-center">
+            <div class="col col-sm-6">
+              <div class="card">
+                <div class="card-header">
+                  <h2>Employee data</h2>
+                </div>
+                <div class="card-body">
+                  <form id="employeeForm">
+                    <div class="flexContainer">
+                      <div class="form-group-custom">
+                        <label class="text-center font-weight-bold" for="id"
+                          >Employee identifier</label
+                        >
+                        <input
+                          class="form-control"
+                          id="id"
+                          type="number"
+                          name="id"
+                          placeholder="Employee identifier"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group-custom">
+                        <label
+                          class="text-center font-weight-bold"
+                          for="emailAddress"
+                          >Email</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="emailAddress"
+                          name="emailAddress"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        id="Female"
+                        required
+                      />
+                      <label class="form-check-label" for="Female">
+                        Female
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        id="Male"
+                        required
+                      />
+                      <label class="form-check-label" for="Male">
+                        Male
+                      </label>
+                    </div>
+                    <div class="flexContainer">
+                      <div class="form-group-custom">
+                        <label class="text-center font-weight-bold" for="name"
+                          >Employee name</label
+                        >
+                        <input
+                          class="form-control"
+                          id="name"
+                          type="text"
+                          name="name"
+                          placeholder="Employee name"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group-custom">
+                        <label class="text-center font-weight-bold" for="salary"
+                          >Salary</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="salary"
+                          name="salary"
+                          placeholder="Salary"
+                          required
+                        />
+                      </div>
+                      <div class="form-group-custom">
+                        <label class="text-center font-weight-bold" for="title"
+                          >Email</label
+                        >
+                        <select class="form-control" name="title">
+                          <option value="WageEmployee" selected
+                            >Wage Employee</option
+                          >
+                          <option value="Manager">Manager</option>
+                          <option value="SalesPerson">Sales Person</option>
+                          <option value="SalesManager">Sales Manager</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group text-right">
+                      <div id="addEmployeeSubmit">
+                        <button class="btn btn-danger" type="reset">
+                          Reset
+                        </button>
+                        <button class="btn btn-primary" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                      <div id="addEmployeeLoading" class="hidden">
+                        <span
+                          class="spinner-border spinner-border-sm"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Loading...
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="tab-pane fade"
+          id="employeeGenerateHome"
+          role="tabpanel"
+          aria-labelledby="employeeGenerateTab"
+        >
+          <div class="row justify-content-md-center">
+            <div class="col col-sm-6">
+              <div class="card">
+                <div class="card-header">
+                  <h2>Employee generation data</h2>
+                </div>
+                <div class="card-body">
+                  <form id="generation">
+                    <div class="flexContainer">
+                      <div class="form-group-custom">
+                        <label
+                          class="text-center font-weight-bold"
+                          for="employeesCount"
+                          >Number of employees</label
+                        >
+                        <input
+                          class="form-control"
+                          id="employeesCount"
+                          type="number"
+                          name="employeesCount"
+                          placeholder="Number of employees [0-100]"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group-custom">
+                        <label
+                          class="text-center font-weight-bold"
+                          for="idLength"
+                          >Number of ID digits</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="idLength"
+                          name="idLength"
+                          placeholder="Number of ID digits"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="flexContainer">
+                      <div class="form-group-custom">
+                        <label
+                          class="text-center font-weight-bold"
+                          for="minSalary"
+                          >Min Salary</label
+                        >
+                        <input
+                          class="form-control"
+                          id="minSalary"
+                          type="number"
+                          name="minSalary"
+                          placeholder="Min Salary"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group-custom">
+                        <label
+                          class="text-center font-weight-bold"
+                          for="maxSalary"
+                          >Max Salary</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="maxSalary"
+                          name="maxSalary"
+                          placeholder="Max Salary"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group text-right">
+                      <div id="generationSubmit">
+                        <button class="btn btn-danger" type="reset">
+                          Reset
+                        </button>
+                        <button class="btn btn-primary" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                      <div id="generationLoading" class="hidden">
+                        <span
+                          class="spinner-border spinner-border-sm"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Loading...
+                      </div>
+                    </div>
+                  </form>
+                  <div class="progress mb-3 hidden" id="progressDiv">
+                    <div
+                      id="progress"
+                      class="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      style="width: 0%"
+                      aria-valuenow="0"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="tab-pane fade"
+          id="employeeShowHome"
+          role="tabpanel"
+          aria-labelledby="employeeShowTab"
+        >
+          <div class="row justify-content-md-center">
+            <div class="col col-xl-7 col-lg-9 col-md-11 col-sm-11">
+              <div class="card">
+                <div class="card-header">
+                  <h2>Show employees</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="alert alert-primary hidden"
+                    id="budgetDiv"
+                    role="alert"
+                  >
+                    Total salary budget: <span id="budget"></span>
+                    <span
+                      id="loadingBudget"
+                      class="spinner-border spinner-border-sm hidden"
+                      role="status"
+                      aria-hidden="true"
+                    >
+                    </span>
+                  </div>
+                  <div class="tableWrap">
+                    <table class="table table-bordered table-striped ">
+                      <thead>
+                        <tr id="tableHead"></tr>
+                      </thead>
+                      <tbody id="tableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalDiv"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">
+              Confirmation form
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            Are you shore that you want to remove employee?
+          </div>
+          <div class="modal-footer">
+            <div class="form-group text-right">
+              <div id="confirmSubmit">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button class="btn btn-primary" id="deleteButton">
+                  Delete Person
+                </button>
+              </div>
+              <div id="confirmLoading" class="hidden">
+                <span
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/formhandler.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/table.js"></script>
+    <script src="./js/random.js"></script>
+    <script src="./js/progressBar.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 013</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 013</header>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            PersonsObjects
+          </div>
+
+          <div class="cardBody primary-text-color">
+            <div class="text-center">
+              <button id="showPersonsButton">
+                Show Persons
+              </button>
+              <button id="addPersonButton">
+                Add Person
+              </button>
+              <button id="generatePersonsButton">
+                Generate Persons
+              </button>
+
+              <button id="filterByAgeButton">
+                Filter By Age
+              </button>
+              <label>Sort by:</label>
+              <select id="sortBySelect">
+                <option value="unsorted">Unsorted</option>
+                <option value="id">ID</option>
+                <option value="name">Name</option>
+                <option value="birthDate">Birth Year</option>
+              </select>
+            </div>
+
+            <div id="showPersons" class="hidden">
+              <div class="text-center light-primary-color orderedListDiv ">
+                <p>Ordered List of person <span id="sortModeSpan"></span></p>
+                <table class="center">
+                  <thead>
+                    <tr id="thPersons"></tr>
+                  </thead>
+                  <tbody id="tbodyPersons"></tbody>
+                </table>
+                <div id="filterDiv" class="hidden">
+                  <span id="filterText"></span>
+                  <button id="backButton">Back</button>
+                </div>
+              </div>
+            </div>
+            <div id="addPerson" class="hidden">
+              <div>
+                <input id="idString" type="number" placeholder="id" />
+                <input id="name" type="text" placeholder="name" />
+                <input id="birthDate" type="number" placeholder="birthDate" />
+                <button disabled id="submitButton">
+                  Add Person
+                </button>
+              </div>
+              <div class="text-center light-primary-color orderedListDiv ">
+                <p>Ordered List of person</p>
+                <ol id="orderedList" class="orderedList"></ol>
+              </div>
+              <div class="text-center light-primary-color orderedListDiv ">
+                <p>Ordered List of person width max age</p>
+                <ol id="orderedListWithMaxAge" class="orderedList"></ol>
+              </div>
+            </div>
+            <div id="generatePersons" class="hidden">
+              <span>Amount of Persons [1-10]</span>
+              <input type="number" id="amountOfPersons" />
+              <button id="generateButton" disabled>Generate</button>
+            </div>
+            <div id="filterByAge" class="hidden">
+              <input type="number" id="minYear" placeholder="min Birth Year" />
+              <input type="number" id="maxYear" placeholder="max Birth Year" />
+              <button id="applyFilter" disabled>Filter</button>
+            </div>
+          </div>
+          <div class="cardFooter default-primary-color ">
+            <label id="errorMessage"></label>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./js/table.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

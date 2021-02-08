@@ -1,0 +1,48 @@
+{
+  "homepage": "http://alexshtilman.github.io/lesson32",
+  "name": "lesson32",
+  "version": "1.0.0",
+  "private": false,
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexshtilman/lesson026.git"
+  },
+  "author": "alex shtilman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexshtilman/lesson026/issues"
+  }
+}

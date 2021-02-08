@@ -1,0 +1,12 @@
+1. Update HW #16
+   - File employees.js. All three methods addEmployee, removeEmployee, computeSalaryBudget should return Promise with some value
+     - addEmployee returns promise with Boolean value (either true or false). So at each point of this function call you should use .then(function(res) {…})… where res may be either true or false
+     - removeEmployee returns promise with undefined value (we don’t use the return value of this function). So at each point of this function call you should use .then(function() {…})….
+     - computeSalaryBudget returns promise with value of the total salary budget. So at each point of this function call you should use .then(function(budget) {….})…
+   - File main.js
+     - All places that contain the employees function calls (addEmployee, removeEmployee, computeSalaryBudget) should be updated with keeping in mind that after a function call returning a Promise whole code should be placed in the chain of ‘then’s’ as we did in the classwork #17
+     - Apply a spinner from the Bootstrap. A spinner is a regular element <div id=”spinner” hidden class=”spinner-border”. > You should control the attribute “hidden” of that <div>. Each time you want to start the spinner element, you apply $(‘#spinner’).attr(‘hidden’, false), and each time you want to stop the spinner you apply $(‘#spinner’).attr(‘hidden’, true) inside ‘then’ function. For example, … $(‘#spinner’).attr(‘hidden’, false); addEmployee(employee).then(function(res){…$(‘#spinner’).attr(‘hidden’, true) })
+     - In the handler of the generation form you should return promise containing either errorMessage or the empty string ‘ ‘; return new Promise(function (resolve) { resolve(errorMessage)}) instead of just return errorMessage
+   - File formhandler.js. To apply the same updates at the point of fnProcessor call, we did at class in that file
+   - HTML file. Add spinner element as specified in the 1.2.2 inside section of buttons as it should either appear or disappear at the same place on the browser window
+   - CSS file. Apply styles for scrolling only table body

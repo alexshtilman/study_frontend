@@ -1,0 +1,16 @@
+.rating {
+  display: "flex";
+  direction: rtl;
+}
+.rating span {
+  cursor: pointer;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  color: gold;
+  content: "\f005";
+}

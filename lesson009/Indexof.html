@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 009</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 009</header>
+      <nav>
+        <a href="./substring.html">substring.html</a>
+        <a class="active" href="./Indexof.html">indexof.html</a>
+        <a href="./delete-substrings.html">delete-substrings.html</a>
+      </nav>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            Index of
+          </div>
+
+          <div class="cardBody primary-text-color">
+            <div id="loader" class="loader hidden pending"></div>
+            <label>
+              Button ‘get index of’ triggers presenting index of the <br />
+              substring or text “substring doesn’t included”</label
+            >
+            <input id="indexString" type="text" placeholder="enter string" />
+            <input id="firstIndex" type="text" placeholder="enter substring" />
+            <div class="actionDiv">
+              <span id="Result">Result</span>
+            </div>
+          </div>
+          <div class="cardFooter default-primary-color ">
+            <button id="submitButton">Get index of</button>
+            <button onclick="submitButtonPromise('index')">with promise</button>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function submitButton() {
+          const indexString = document.getElementById("indexString").value;
+          const firstIndex = document.getElementById("firstIndex").value;
+          if (indexString && firstIndex) {
+            check = true;
+            document.getElementById("Result").textContent =
+              indexString.indexOf(firstIndex) == "-1"
+                ? "Substring not found!"
+                : indexString.indexOf(firstIndex);
+          } else document.getElementById("Result").textContent = "All fields required";
+        });
+    </script>
+  </body>
+</html>

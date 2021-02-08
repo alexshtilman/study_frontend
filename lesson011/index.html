@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 011</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 011</header>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            PersonsObjects
+          </div>
+
+          <div class="cardBody primary-text-color">
+            <div id="loader" class="loader hidden pending"></div>
+            <div>
+              <input
+                id="idString"
+                type="number"
+                placeholder="id"
+                min="100"
+                max="999"
+              />
+              <input id="name" type="text" placeholder="name" />
+              <input
+                id="birthDate"
+                type="number"
+                placeholder="birthDate"
+                min="1920"
+                max="2020"
+              />
+            </div>
+            <div class="text-center">
+              <button disabled id="submitButton" onclick="addPerson()">
+                Add Person
+              </button>
+            </div>
+            <div class="text-center light-primary-color orderedListDiv ">
+              <p>Ordered List of person</p>
+              <ol id="orderedList" class="orderedList"></ol>
+            </div>
+            <div class="text-center light-primary-color orderedListDiv ">
+              <p>Ordered List of person width max age</p>
+              <ol id="orderedListWithMaxAge" class="orderedList"></ol>
+            </div>
+          </div>
+          <div class="cardFooter default-primary-color ">
+            <label id="errorMessage"></label>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

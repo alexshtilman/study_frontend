@@ -1,0 +1,59 @@
+{
+  "homeDir": "/lesson31/",
+  "homeDirTitle": "lesson 31",
+  "employeeUrl": "http://localhost:3500/employees/",
+  "baseUrl": "http://localhost:3500/",
+  "accessToken": "accessToken",
+  "defaultUsers": [
+    { "email": "user@user.com", "password": "password" },
+    { "email": "admin@user.com", "password": "admin" }
+  ],
+  "pollingInterval": 1000,
+  "maxPerPage": 6,
+  "tabsPerPage": 10,
+  "defaultRate": 5,
+  "defaultMaxRate": 5,
+  "formValidationValues": {
+    "id": 5,
+    "name": 4,
+    "salary": {
+      "minRange": 100,
+      "min": 5000,
+      "max": 35000
+    }
+  },
+  "navigationLinks": [
+    { "link": "employees/", "text": "Employees", "isAdmin": false },
+    {
+      "link": "title/statistics/",
+      "text": "Title statistics",
+      "isAdmin": true
+    },
+    { "link": "search/", "text": "Search", "isAdmin": false },
+    { "link": "generation/", "text": "Employee generation", "isAdmin": true },
+    {
+      "link": "salary/statistics/",
+      "text": "Salary statistics",
+      "isAdmin": false
+    }
+  ],
+  "titleOptions": [
+    "select title...",
+    "Developer",
+    "Development Manager",
+    "QA Tester",
+    "QA Manager",
+    "Sales Person",
+    "Sales Manager"
+  ],
+  "maleNameArray": ["Vasya", "Petya", "Kolya", "Sergey", "Yura", "Igor"],
+  "femaleNameArray": ["Masha", "Dasha", "Lena", "Sveta", "Alina"],
+  "domainArray": [
+    "@gmail.com",
+    "@mail.ru",
+    "@test.pro",
+    "@tel-ran.co.il",
+    "@gov.il",
+    "@yahoo.com"
+  ]
+}

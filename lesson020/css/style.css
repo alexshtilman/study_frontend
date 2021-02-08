@@ -1,0 +1,62 @@
+.flexContainer {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+
+.tableWrap {
+  height: 400px;
+  overflow: auto;
+}
+thead tr th {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 16px;
+  padding-left: 15px;
+  text-align: left;
+}
+table {
+  width: 100%;
+}
+table td {
+  padding: 16px;
+}
+.log {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.blink {
+  animation: blink 2s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

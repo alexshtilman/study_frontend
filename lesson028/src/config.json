@@ -1,0 +1,44 @@
+{
+  "homeDir": "/lesson28/",
+  "homeDirTitle": "lesson 28",
+  "jsonUrl": "http://localhost:3500/employees/",
+  "maxPerPage": 6,
+  "tabsPerPage": 10,
+  "defaultRate": 5,
+  "defaultMaxRate": 5,
+  "formValidationValues": {
+    "id": 5,
+    "name": 4,
+    "salary": {
+      "minRange": 100,
+      "min": 5000,
+      "max": 35000
+    }
+  },
+  "navigationLinks": [
+    { "link": "employees/", "text": "Employees" },
+    { "link": "title/statistics/", "text": "Title statistics" },
+    { "link": "search/", "text": "Search" },
+    { "link": "generation/", "text": "Employee generation" },
+    { "link": "salary/statistics/", "text": "Salary statistics" }
+  ],
+  "titleOptions": [
+    "select title...",
+    "Developer",
+    "Development Manager",
+    "QA Tester",
+    "QA Manager",
+    "Sales Person",
+    "Sales Manager"
+  ],
+  "maleNameArray": ["Vasya", "Petya", "Kolya", "Sergey", "Yura", "Igor"],
+  "femaleNameArray": ["Masha", "Dasha", "Lena", "Sveta", "Alina"],
+  "domainArray": [
+    "@gmail.com",
+    "@mail.ru",
+    "@test.pro",
+    "@tel-ran.co.il",
+    "@gov.il",
+    "@yahoo.com"
+  ]
+}

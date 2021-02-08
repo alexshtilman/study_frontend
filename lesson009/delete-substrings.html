@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home work 009</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapContent">
+      <header>Home work 009</header>
+      <nav>
+        <a href="./substring.html">substring.html</a>
+        <a href="./Indexof.html">indexof.html</a>
+        <a class="active" href="./delete-substrings.html"
+          >delete-substrings.html</a
+        >
+      </nav>
+      <main>
+        <div class="cardItem">
+          <div class="cardHeader dark-primary-color text-primary-color">
+            delete substrings
+          </div>
+          <div class="cardBody primary-text-color">
+            <div id="loader" class="loader hidden pending"></div>
+            <label>
+              Button ‘get string after removing all substrings
+            </label>
+            <input id="deleteString" type="text" placeholder="enter string" />
+            <input
+              id="deleteSubstring"
+              type="text"
+              placeholder="enter first index"
+            />
+            <div class="actionDiv">
+              <span id="Result">Result</span>
+            </div>
+          </div>
+          <div class="cardFooter default-primary-color ">
+            <button id="submitButton">
+              get string after removing all substrings
+            </button>
+            <button onclick="submitButtonPromise('delete')">
+              with promise
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer>Alex Shtilman Java 36 gungam@outlook.com</footer>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function submitButton() {
+          let deleteString = document.getElementById("deleteString").value;
+          const deleteSubstring = document.getElementById("deleteSubstring")
+            .value;
+
+          check = deleteString && deleteSubstring;
+          if (check) {
+            while ((index = deleteString.indexOf(deleteSubstring)) != -1) {
+              deleteString = deleteString.replace(deleteSubstring, "");
+            }
+            document.getElementById("Result").textContent = deleteString;
+          } else document.getElementById("Result").textContent = "All fields required";
+        });
+    </script>
+  </body>
+</html>

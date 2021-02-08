@@ -1,0 +1,18 @@
+{
+  "formValidationValues": {
+    "id": 5,
+    "name": 4,
+    "salary": {
+      "minRange": 100,
+      "min": 5000,
+      "max": 35000
+    }
+  },
+  "navigationLinks": [
+    { "link": "/lesson025/employees", "text": "Employees" },
+    { "link": "/lesson025/title/statistics", "text": "Title statistics" },
+    { "link": "/lesson025/search", "text": "Search" },
+    { "link": "/lesson025/generation", "text": "Employee generation" },
+    { "link": "/lesson025/salary/statistics", "text": "Salary statistics" }
+  ]
+}

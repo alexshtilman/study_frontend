@@ -1,0 +1,172 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.dark-primary-color {
+  background: #00796b;
+}
+.default-primary-color {
+  background: #009688;
+}
+.light-primary-color {
+  background: #b2dfdb;
+}
+.text-primary-color {
+  color: #ffffff;
+}
+.accent-color {
+  background: #009688;
+}
+.primary-text-color {
+  color: #212121;
+}
+.secondary-text-color {
+  color: #757575;
+}
+.divider-color {
+  border-color: #bdbdbd;
+}
+.success {
+  border: 1px solid #009688;
+}
+.danger {
+  border: 1px solid #ff0000;
+}
+.default {
+  border: 1px solid #bdbdbd;
+}
+.wrapContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header {
+  text-align: center;
+  font-size: 3vw;
+  height: 10%;
+}
+nav {
+  text-align: center;
+  font-size: 1vw;
+  height: 5vh;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:hover,
+nav a:visited {
+  color: #757575;
+}
+nav a.active {
+  color: #212121;
+  text-decoration: underline;
+}
+main {
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.cardItem {
+  border: 1px solid #757575;
+  border-radius: 5px;
+  margin: 5px;
+  min-height: 40vh;
+  min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+.cardHeader {
+  text-align: center;
+  padding: 1vh 1vw 1vh 1vw;
+  text-transform: uppercase;
+}
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vh 2vw 2vh 2vw;
+  height: 100%;
+  position: relative;
+}
+.cardBody label {
+  font-size: 1vw;
+}
+.actionDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.cardFooter {
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: right;
+}
+footer {
+  font-size: 1vw;
+  text-align: center;
+  height: 1vh;
+  margin: 1vh;
+  padding: 1vh;
+}
+input,
+button {
+  height: 5vh;
+  padding: 1vh 1vw 1vh 1vw;
+  font-size: 1vw;
+  margin: 5px;
+}
+button {
+  width: 20vw;
+}
+.text-center {
+  text-align: center;
+}
+.loader {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 12vw;
+}
+.pending {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+}
+.responsePositive {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #42db34;
+}
+.responseNegative {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #d40924;
+}
+.hidden {
+  display: none;
+  text-align: center;
+}
+.orderedList {
+  list-style: none;
+}
+.orderedListDiv {
+  min-height: 15vh;
+  vertical-align: middle;
+  margin-bottom: 1vh;
+  padding: 20px;
+}
+.deleteButton {
+  width: 90px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  min-width: 25vw;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}

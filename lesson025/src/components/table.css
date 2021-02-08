@@ -1,0 +1,26 @@
+.tableWrap {
+  height: 400px;
+  overflow: auto;
+}
+thead tr th {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 16px;
+  padding-left: 15px;
+  text-align: left;
+}
+table {
+  width: 100%;
+}
+table td {
+  padding: 16px;
+  vertical-align: middle !important;
+}

@@ -1,0 +1,38 @@
+{
+  "homepage": "http://alexshtilman.github.io/lesson_021",
+  "name": "lesson_021",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "13.11.0",
+    "npm": "6.14.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
